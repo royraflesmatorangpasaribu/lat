@@ -13,7 +13,7 @@
      </div>
 </nav>
     <div style="text-align:center;">
-        <img src="<?php echo base_url('foto_royraflesmatorangpasaribu.jpg'); ?>" alt="fotoroy" style="height: 260px; width: 260px; border-radius: 50%; object-fit: cover; object-position: 0 -8px;"  border="2px" ><br>
+        <img src="<?php echo base_url('assets/img/foto_royraflesmatorangpasaribu.jpg'); ?>" alt="fotoroy" style="height: 260px; width: 260px; border-radius: 50%; object-fit: cover; object-position: 0 -8px;"  border="2px" ><br>
         <p><h2><b>Hi, I'm</b></h2></p>  
         <button type="button" class="btn btn-secondary" style="width: 300px;"><?= $nama ?></button><br><br>
         <button type="button" class="btn btn-secondary" style="width: 300px;">Kelas <?= $kelas ?></button><br><br>
