@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
-    <!-- Tambahkan link ke Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <style>
-        /* CSS kustom untuk mengatur tampilan */
-        .custom-container {
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .custom-form {
-            background-color: rgba(255, 255, 255, 0.8); /* Latar belakang transparan */
-            padding: 20px;
-            border-radius: 10px;
-            border:100px;
-        }
-    </style>
-</head>
-<body style="background-color: #717274;">
+<!--  -->
+<?= $this->extend('layouts/app') ?>
+<?= $this->section('content') ?>
+<div style="background-color: #717274;">
+
+
     <div class="container custom-container">
         <div class="col-md-6 custom-form">
             <h1 class="text-center" style="color: #717274;">Page Create User</h1>
@@ -69,4 +49,5 @@
             </form>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1
+    </div>
+    <?= $this->endSection() ?>
