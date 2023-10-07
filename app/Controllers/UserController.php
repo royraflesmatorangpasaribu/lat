@@ -59,6 +59,14 @@ class UserController extends BaseController
 
         // agar tampilan di store kelas terpanggil A, B, C, D
         // $kelasModel = new KelasModel();
+        $path = 'assets/uploads/img/';
+
+        $foto = $this->request->getFile('foto');
+
+        $name = $foto->getRandomName();
+
+        
+
         if($this->request->getVar('kelas') != ''){
             $kelas_select = $this->kelasModel->where('id', $this->request->getVar('kelas'))->first();
             $nama_kelas = $kelas_select['nama_kelas'];
@@ -85,25 +93,39 @@ class UserController extends BaseController
             ],
             'kelas' => [
                 'rules' => 'required',
-                'errors' => [
-                'required' => '{field} harus di isi!!',
+                    'errors' => [
+                    'required' => '{field} harus di isi!!',
                 ]
             ],
+            'foto' => [
+                'rules' => 'uploaded[foto]|is_image[foto]',
+                'errors' => [
+                    'uploaded' => '{field} harus di isi!!',
+                    'is_image' => '{field} harus di isi dengan Gambar!!'
+                ]
+            ],
+            
             // 'nama' => 'required|alpha_space',
             // 'npm' => 'required|is_unique[user.npm]',
             // 'kelas' => 'required'
+            // 'foto' => 'uploaded[foto]|is_image[foto]'
         ])){
             // dd($validation);
             session()->setFlashdata('nama_kelas');
             return redirect()->back()->withInput()->with('nama_kelas', $nama_kelas);
         }
        
+        if($foto->move($path, $name)) {
+            $foto = base_url($path.$name);
+        }
+
         // $userModel = new UserModel();
 
         $this->userModel->saveUser ([
             'nama' => $this->request->getVar('nama'),
             'id_kelas' => $this->request->getVar('kelas'),
             'npm' => $this->request->getVar('npm'),
+            'foto' => $foto,
         ]);
 
         // digunakan untuk menampilkan data ke halaman profile
@@ -117,6 +139,17 @@ class UserController extends BaseController
 
         // disini di redirect agar setelah mengisi form create user langsung menuju halaman list user
         return redirect()->to ('/user');
+    }
+
+    public function show($id){
+        $user = $this->userModel->getUser($id);
+
+        $data = [
+            'title' => 'Profile',
+            'user'  => $user,
+        ];
+        
+        return view('profil', $data);
     }
 
 }

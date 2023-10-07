@@ -21,7 +21,7 @@
         </figcaption>
     </figure>
     
-    <!-- <a href="#" type="button" class="btn btn-primary">Tambah Data</a> -->
+    <a href="<?= base_url('user/create') ?>" type="button" class="btn btn-primary mb-3">Tambah Data</a>
 
     <!-- Tabel -->
     <table class="table">
@@ -44,6 +44,7 @@
                             <td class="col justify-content-center text-center"><?= $user['npm'] ?></td>
                             <td class="col justify-content-center text-center"><?= $user['nama_kelas'] ?></td>
                             <td class="col justify-content-center text-center">
+                                <a href="<?= base_url('user/' . $user['id']) ?>" class="btn btn-success">Detail</a>
                                 <button type="button" class="btn btn-warning">Edit</button>
                                 <button type="button" class="btn btn-danger">Hapus</button>
                             </td>

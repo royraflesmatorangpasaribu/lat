@@ -8,7 +8,15 @@
         <div class="col-md-6 custom-form">
             <h1 class="text-center" style="color: #717274;">Page Create User</h1>
             <?php $nama_kelas = session()->getFlashdata('nama_kelas'); ?>
-            <form action="<?= base_url('/user/store') ?>" method="post">
+            <form action="<?= base_url('/user/store') ?>" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto</label>
+                    <input type="file" class="form-control <?= (empty(validation_show_error('foto'))) ? '' : 'is-invalid' ?>"  id="foto" name="foto">
+                    <div class='invalid-feedback'>
+                        <?= validation_show_error('foto'); ?>
+                    </div>
+                </div>
+
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
                     <input name="nama" type="text"  class="form-control <?= (empty(validation_show_error('nama'))) ? '' : 'is-invalid' ?>"  value="<?= old('nama') ?>" id="nama" placeholder="Ex : Budi Ahmad">
