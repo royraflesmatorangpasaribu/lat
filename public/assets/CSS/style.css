@@ -1,0 +1,180 @@
+.biodata {
+  background-image: url("https://drive.google.com/uc?id=1WYI-zDvOOwOn_kLVo4YUZ6Eu8zTRU5Xq");
+  width: 950px;
+  height: 320px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin: 20px auto;
+  padding: 40px;
+  padding-bottom: 10px;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+
+.databasetab{
+  min-height: 100vh;
+  background: url("https://drive.google.com/uc?id=1a1GJAtJIWqzzKqq4s513uKZm0-PyAiKB") center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.databasetabd{
+  min-height: 100vh;
+  background: url("https://drive.google.com/uc?id=1kcigTQwb5jjUjRiZ33QmxnbivD08Qdnn") center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+main.table{
+  width: 82vw;
+  height: 80vh;
+  background-color: #fff5;
+  backdrop-filter:blur(7px);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: .8rem;
+
+  overflow: hidden;
+}
+
+table{
+  width: 100%;
+}
+
+
+.table__header{
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: .8rem 1rem;
+}
+
+.table__body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+.table__body:hover::-webkit-scrollbar-thumb{
+  visibility: hidden;
+}
+
+.table__body{
+  width: 95%;
+  max-height: calc(89% - .8rem);
+  background-color: #fffb;
+  margin: .8rem auto;
+  border-radius: .6rem;
+
+  overflow: auto;
+}
+
+table, th, td{
+  border-collapse: collapse;
+  padding: 1rem;
+
+}
+
+thead th{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1de;
+}
+
+tbody tr:nth-child(even){
+  background-color: #0000000b;
+}
+
+tbody tr:hover{
+  background-color: #fff6;
+}
+
+/* Styling navbar */
+.navbar {
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Styling teks kiri di navbar */
+.navbar .brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(2, 2, 2);
+  display: flex;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 40px; /* Atur ukuran gambar sesuai kebutuhan */
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+/* Styling daftar menu kanan di navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling setiap item daftar menu */
+.navbar li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* Efek hover pada daftar menu */
+.navbar li:hover a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(40, 160, 239);
+  bottom: -2px;
+  left: 0;
+}
+
+/* Menambahkan padding di bawah konten untuk mencegah penutupan */
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
