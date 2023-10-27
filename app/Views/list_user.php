@@ -45,8 +45,12 @@
                             <td class="col justify-content-center text-center"><?= $user['nama_kelas'] ?></td>
                             <td class="col justify-content-center text-center">
                                 <a href="<?= base_url('user/' . $user['id']) ?>" class="btn btn-success">Detail</a>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Hapus</button>
+                                <a href="<?= base_url('user/' . $user['id'] . '/edit') ?>" class="btn btn-warning">Edit</a>
+                                <form action="<?= base_url('user/' . $user['id']) ?>" method="post" style="display:inline-block">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <?= csrf_field() ?>
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     <?php
