@@ -104,3 +104,77 @@ tbody tr:nth-child(even){
 tbody tr:hover{
   background-color: #fff6;
 }
+
+/* Styling navbar */
+.navbar {
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Styling teks kiri di navbar */
+.navbar .brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(2, 2, 2);
+  display: flex;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 40px; /* Atur ukuran gambar sesuai kebutuhan */
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+/* Styling daftar menu kanan di navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling setiap item daftar menu */
+.navbar li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* Efek hover pada daftar menu */
+.navbar li:hover a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(40, 160, 239);
+  bottom: -2px;
+  left: 0;
+}
+
+/* Menambahkan padding di bawah konten untuk mencegah penutupan */
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

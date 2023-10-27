@@ -24,7 +24,18 @@
     </style>
 </head>
 <body>
-    
+<div class="navbar">
+        <div class="navbar-container">
+            <a class="brand" href="#">
+                <img src="https://drive.google.com/uc?id=1jPPaKCLavSTLcfcpwCh1JBgmdfWnbvmb" alt="Logo" /> Universitas Lampung
+            </a>
+            <ul>
+                <li><a href="<?= base_url('/') ?>">Home</a></li>
+                <li><a href="<?= base_url('/user') ?>">List Users</a></li>
+                <li><a href="<?= base_url('/kelas') ?>">List Kelas</a></li>
+            </ul>
+        </div>
+    </div>
     <?= $this->renderSection('content')?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
